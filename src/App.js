@@ -5,9 +5,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './Styles/App.css';
 import NavBar from './components/Navigation';
 import ZoningMap from './components/ZoningMap';
-import TabContent from './components/TabContent';
+// import TabContent from './components/TabContent';
 import SiteHeader from "./components/SiteHeader";
-import RouterTabs from "./components/RouterTabs";
+import RouterTabsConnected from "./components/RouterTabs";
 
 class App extends Component {
   render() {
@@ -27,8 +27,7 @@ class App extends Component {
             <div role="main" className="container">
 
                 <SiteHeader/>
-                <RouterTabs/>
-                <TabContent/>
+                <RouterTabsConnected/>
 
                 <div className="row">
                     <div className="col">
@@ -37,9 +36,20 @@ class App extends Component {
                             <Route exact path="/" component={ZoningMap}/>
                             <Route exact path="/Zoning" component={ZoningMap}/>
 
-                            <Route path="/census" render={() => (
+                            <Route path="/Census" render={() => (
                                     <h1>censusdata</h1>
                                 )}/>
+
+                            <Route path="/TownBoard" render={() => (
+                                <h1>Town Board</h1>
+                            )}/>
+                            <Route path="/EventLaw" render={() => (
+                                <h1>Event Law</h1>
+                            )}/>
+                            <Route path="/Petition" render={() => (
+                                <h1>Petition</h1>
+                            )}/>
+
                         </div>
                     </div>
                 </div>
