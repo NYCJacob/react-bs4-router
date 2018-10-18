@@ -27,22 +27,22 @@ export const RouterLinks = () => (
                 </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink activeStyle={ {backgroundColor: "#40617F"}} to="/Census">
+                <NavLink activeStyle={ {backgroundColor: "#40617F"}} className="nav-link" to="/Census">
                     Census
                 </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink exact activeClassName="active" to="/TownBoard">
+                <NavLink exact activeClassName="active" className="nav-link" to="/TownBoard">
                     Town Board
                 </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink exact activeClassName="active" to="/EventLaw">
+                <NavLink exact activeClassName="active" className="nav-link" to="/EventLaw">
                     Event Law
                 </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink exact activeClassName="active" to="/Petition">
+                <NavLink exact activeClassName="active" className="nav-link" to="/Petition">
                     Petition
                 </NavLink>
             </li>
