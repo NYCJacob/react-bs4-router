@@ -1,10 +1,19 @@
 // Tab.js
 
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 
 export default class Tab extends Component {
+    static propTypes = {
+        activeTab: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        onClick: PropTypes.func.isRequired,
+    };
+
+    onClick = () => {
+        const { label, onClick } = this.props;
+        onClick(label);
+    }
 
     render() {
         const { onClick, props: { activeTab, label }} = this;
@@ -16,14 +25,12 @@ export default class Tab extends Component {
         }
 
         return (
-            <NavLink
-                activeClassName="active"
+            <a
                 className={className}
-                to={ label }
                 onClick={onClick}
             >
                 {label}
-            </NavLink>
+            </a>
         );
     }
 }

@@ -18,20 +18,26 @@ export default class TabList extends Component {
         };
     }
 
+    onClickTabItem = (tab) => {
+        this.setState({ activeTab: tab });
+    }
+
     render() {
         const { onClickTabItem, props: {children},state: {activeTab} } = this;
 
         return (
             <div>
                 <nav>
-                    <div className="nav nav-tabs">
+                    <div className="nav nav-pills">
                         {children.map((child) => {
                             const { label } = child.props;
 
                             return (
                                 <Tab
+                                    activeTab={activeTab}
                                     key={label}
                                     label={label}
+                                    onClick={onClickTabItem}
                                 />
                             );
                         })}
