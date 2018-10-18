@@ -3,11 +3,10 @@ import { Route } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './Styles/App.css';
-import NavBar from './components/Navigation';
 import ZoningMap from './components/ZoningMap';
-// import TabContent from './components/TabContent';
 import SiteHeader from "./components/SiteHeader";
-import RouterTabs from "./components/RouterTabs";
+import { RouterTabs, RouterLinks } from "./components/RouterTabs";
+
 
 class App extends Component {
   render() {
@@ -19,15 +18,17 @@ class App extends Component {
                 <meta name="description" content="Marbletown NY Information and Analysis"/>
                 <meta name="author" content="FutureSense Technologies"/>
                 <title>Marbletown Info</title>
-                {/*mapbox*/}
-                {/*<script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>*/}
                 <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
             </Helmet>
 
             <div role="main" className="container">
-
-                <SiteHeader/>
-                <RouterTabs/>
+                <div className="row">
+                    <SiteHeader/>
+                </div>
+                <div className="row">
+                    <RouterLinks/>
+                </div>
+                {/*<RouterTabs/>*/}
 
                 <div className="row">
                     <div className="col">
