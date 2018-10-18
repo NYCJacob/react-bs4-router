@@ -7,7 +7,7 @@ import NavBar from './components/Navigation';
 import ZoningMap from './components/ZoningMap';
 import TabContent from './components/TabContent';
 import SiteHeader from "./components/SiteHeader";
-
+import RouterTabs from "./components/RouterTabs";
 
 class App extends Component {
   render() {
@@ -25,7 +25,9 @@ class App extends Component {
             </Helmet>
 
             <div role="main" className="container">
+
                 <SiteHeader/>
+                <RouterTabs/>
                 <TabContent/>
 
                 <div className="row">
