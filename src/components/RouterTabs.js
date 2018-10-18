@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function RouterTabs(props) {
+export default function RouterTabs(props) {
 
     const activeStyling = {
         fontWeight: "bold",
@@ -10,16 +10,14 @@ function RouterTabs(props) {
 
     const tabs = ["Zoning", "Census", "TownBoard", "EventLaw", "Petition"];
     const tabList = tabs.map( (tab) =>
-        <NavLink to={tab} activeStyle={ activeStyling }> {tab} </NavLink>);
+        <li className="nav-item">
+            <NavLink to={tab} activeStyle={ activeStyling }> {tab} </NavLink>
+        </li>
+    );
 
     return (
-        <div id="routerTabs">
+        <ul className="nav nav-pills nav-fill" id="routerTabs">
             { tabList }
-        </div>
+        </ul>
     )
 }
-
-
-const RouterTabsConnected = withRouter(RouterTabs);
-
-export default RouterTabsConnected;

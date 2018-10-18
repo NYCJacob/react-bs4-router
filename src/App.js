@@ -7,7 +7,7 @@ import NavBar from './components/Navigation';
 import ZoningMap from './components/ZoningMap';
 // import TabContent from './components/TabContent';
 import SiteHeader from "./components/SiteHeader";
-import RouterTabsConnected from "./components/RouterTabs";
+import RouterTabs from "./components/RouterTabs";
 
 class App extends Component {
   render() {
@@ -27,7 +27,7 @@ class App extends Component {
             <div role="main" className="container">
 
                 <SiteHeader/>
-                <RouterTabsConnected/>
+                <RouterTabs/>
 
                 <div className="row">
                     <div className="col">
